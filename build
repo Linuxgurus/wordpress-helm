@@ -4,14 +4,14 @@ main() {
   source AppInfo.txt
   update_chart_version "$HELM_FULL_VERSION"
   git commit chart/ build AppInfo.txt -m "autocommit on $(date)" # && git push
-  helm package chart
+  helm package charts/wordpress
   push_helm_chart "$APP_NAME" "$HELM_FULL_VERSION" "$REGISTRIES"
 }
 
 update_chart_version() {
   local version=$1
-  if [[ -f chart/Chart.yaml ]]; then
-    sed -i.bak "s/^version: .*/version: ${version}/" chart/Chart.yaml
+  if [[ -f charts/wordpress/Chart.yaml ]]; then
+    sed -i.bak "s/^version: .*/version: ${version}/" charts/Chart.yaml
   else
     echo "Error: chart/Chart.yaml not found!" >&2
     exit 1

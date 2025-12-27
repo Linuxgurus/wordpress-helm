@@ -10,6 +10,7 @@ locals {
       annotations = {
         "cert-manager.io/cluster-issuer"            = var.cert_issuer
         "external-dns.alpha.kubernetes.io/hostname" = var.hostname
+        "nginx.ingress.kubernetes.io/proxy-body-size" = "32m"
       }
       hosts = [
         for host in local.hosts : {

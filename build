@@ -3,7 +3,7 @@
 main() {
   source AppInfo.txt
   update_chart_version "$HELM_FULL_VERSION"
-  git commit chart/ build AppInfo.txt -m "autocommit on $(date)" # && git push
+  git commit charts/ build AppInfo.txt -m "autocommit on $(date)" # && git push
   helm package charts/wordpress
   push_helm_chart "$APP_NAME" "$HELM_FULL_VERSION" "$REGISTRIES"
 }

@@ -19,7 +19,7 @@ variable "chart" {
 variable "repository" {
   description = "Which helm repository to use"
   type        = string
-  default     = "oci://ghcr.io/Linxgurus/"
+  default     = "http://linuxgurus.github.io/wordpress"
 }
 
 variable "hostname" {

@@ -10,7 +10,7 @@ A comprehensive Helm chart for deploying WordPress on Kubernetes, including Mari
   - [Prerequisites](#prerequisites)
   - [Project Structure](#project-structure)
   - [Installation](#installation)
-    - [From Artifact Hub (Recommended)](#from-artifact-hub-recommended)
+    - [From Helm Repository (Recommended)](#from-helm-repository-recommended)
     - [From Source](#from-source)
       - [1. Clone the repository](#1-clone-the-repository)
       - [2. Install the chart](#2-install-the-chart)
@@ -56,12 +56,12 @@ The chart is designed to be flexible, supporting various ingress options, persis
 
 ## Installation
 
-### From Artifact Hub (Recommended)
+### From Helm Repository (Recommended)
 
-Once published, you can install this chart using Helm:
+To install this chart using Helm:
 
 ```bash
-helm repo add wordpress https://Linuxgurus.github.io/wordpress-helm
+helm repo add wordpress http://linuxgurus.github.io/wordpress
 helm install my-wordpress wordpress/wordpress
 ```
 
@@ -79,7 +79,7 @@ cd wordpress-helm
 To install the chart with the release name `my-wordpress`:
 
 ```bash
-helm install my-wordpress ./chart
+helm install my-wordpress ./charts/wordpress
 ```
 
 ### 3. Verify the deployment
@@ -102,7 +102,7 @@ The following table lists the configurable parameters of the WordPress chart and
 | `mariadb.storage.size` | MariaDB persistent volume size | `10Gi` |
 | `wordpress.persistence.size` | WordPress persistent volume size | `10Gi` |
 
-For more detailed configuration, please refer to the [values.yaml](./chart/values.yaml) file.
+For more detailed configuration, please refer to the [values.yaml](./charts/wordpress/values.yaml) file.
 
 ## Persistence
 

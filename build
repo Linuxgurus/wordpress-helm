@@ -6,7 +6,7 @@ main() {
   git add -A
   message=$(get_commit_message)
   echo "$message"
-  git commit charts/ build AppInfo.txt -m "$message" && git push
+  git commit -m "$message" && git push
   helm package charts/wordpress
   push_helm_chart "$APP_NAME" "$HELM_FULL_VERSION" "$REGISTRIES"
 }

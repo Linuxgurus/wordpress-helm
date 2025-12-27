@@ -12,6 +12,41 @@ entries:
       artifacthub.io/license: GPL-2.0
     apiVersion: v2
     appVersion: 6.9.0
+    created: "2025-12-27T16:47:50.426010033Z"
+    description: A comprehensive Helm chart for deploying WordPress on Kubernetes,
+      including MariaDB as the database backend.
+    digest: 4454d9b67eda2367f43182d6992ad6128e8802b6d82b4ae69c3b3805b4acf982
+    home: https://github.com/Linuxgurus/wordpress-helm
+    icon: https://s.w.org/style/images/about/WordPress-logotype-wmark.png
+    keywords:
+    - wordpress
+    - cms
+    - blog
+    - mariadb
+    - database
+    - php
+    maintainers:
+    - email: jblack@linugxuru.net
+      name: James Blackwell
+    name: wordpress
+    sources:
+    - https://github.com/Linuxgurus/wordpress-helm
+    - https://github.com/wordpress/wordpress
+    type: application
+    urls:
+    - https://github.com/Linuxgurus/wordpress/releases/download/wordpress-1.0.42/wordpress-1.0.42.tgz
+    version: 1.0.42
+  - annotations:
+      artifacthub.io/category: cms
+      artifacthub.io/changes: |
+        - kind: added
+          description: "Initial release of the WordPress Helm chart"
+        - kind: changed
+          description: "Updated documentation for better clarity and Artifact Hub support"
+      artifacthub.io/language: php
+      artifacthub.io/license: GPL-2.0
+    apiVersion: v2
+    appVersion: 6.9.0
     created: "2025-12-27T10:58:20.808934322Z"
     description: A comprehensive Helm chart for deploying WordPress on Kubernetes,
       including MariaDB as the database backend.
@@ -281,4 +316,4 @@ entries:
     urls:
     - https://github.com/Linuxgurus/wordpress/releases/download/wordpress-1.0.34/wordpress-1.0.34.tgz
     version: 1.0.34
-generated: "2025-12-27T10:58:20.808975088Z"
+generated: "2025-12-27T16:47:50.426054616Z"
